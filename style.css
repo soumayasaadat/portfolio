@@ -78,6 +78,7 @@ nav ul li a:hover {
   padding: 0 var(--padding);
   display: flex;
   align-items: center;
+  margin-top: 100px;
 }
 .container-texts {
   position: relative;
@@ -259,4 +260,87 @@ head link {
 .project-links .btn {
   padding: 0.5rem 1.2rem;
   font-size: 0.9rem;
+}
+
+/* --- Style du menu latéral --- */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: #fff;
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 60px;
+  z-index: 1000;
+}
+
+.sidebar li {
+  width: 100%;
+  padding: 15px 20px;
+}
+
+.sidebar a {
+  width: 100%;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+}
+
+/* Icône menu — cachée sur PC */
+.menu-icon {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  display: none; /* cachée par défaut */
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: #fff;
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 60px;
+  z-index: 1000;
+  text-align: left;
+}
+
+.sidebar li {
+  padding: 15px 20px;
+}
+
+.sidebar a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* --- Mode mobile --- */
+@media screen and (max-width: 768px) {
+  .main-menu {
+    display: none; /* cache le menu normal */
+  }
+
+  .menu-icon {
+    display: block; /* affiche le bouton menu */
+    position: absolute;
+    right: 20px; /* place l'icône à droite */
+    top: 25px; /* ajuste verticalement */
+  }
+
+  nav {
+    position: relative;
+  }
 }
