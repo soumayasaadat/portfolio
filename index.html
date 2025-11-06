@@ -29,7 +29,7 @@
     <section class="home" id="home">
       <nav>
         <h2>Port<span>folio</span></h2>
-        <ul>
+        <ul >
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About me</a></li>
           <li><a href="#services">Services</a></li>
@@ -37,6 +37,32 @@
           <li><a href="#projects">My projects</a></li>
         </ul>
       </nav>
+      
+      <!-- Icône du menu (téléphone uniquement) -->
+<img
+  src="image/menu.png"
+  alt="Menu"
+  class="menu-icon"
+  onclick="showSidebar()"
+/>
+
+<!-- Menu latéral (visible uniquement sur téléphone) -->
+<ul class="sidebar">
+  <li>
+    <img
+      src="image/close.png"
+      alt="Fermer"
+      class="close-icon"
+      onclick="hideSidebar()"
+    />
+  </li>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#about">About Me</a></li>
+  <li><a href="#services">Services</a></li>
+  <li><a href="#skills">Skills</a></li>
+  <li><a href="#projects">My Projects</a></li>
+</ul>
+
         
 
       <div class="content">

@@ -299,7 +299,7 @@ head link {
   display: none; /* cachée par défaut */
 }
 
-/* Sidebar */
+/* Menu latéral */
 .sidebar {
   position: fixed;
   top: 0;
@@ -312,35 +312,68 @@ head link {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding-top: 60px;
+  padding-top: 20px;
   z-index: 1000;
-  text-align: left;
 }
 
+/* Icône de fermeture */
+.close-icon {
+  width: 25px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+/* Liens du menu */
 .sidebar li {
+  width: 100%;
   padding: 15px 20px;
 }
 
-.sidebar a {
+.sidebar li a {
   color: #000;
   text-decoration: none;
   font-weight: 600;
+  display: block;
+  width: 100%;
 }
 
-/* --- Mode mobile --- */
-@media screen and (max-width: 768px) {
-  .main-menu {
-    display: none; /* cache le menu normal */
-  }
+.sidebar li a:hover {
+  background-color: #f4f4f4;
+}
 
+/* ✅ Visible uniquement sur téléphone */
+@media screen and (max-width: 600px) {
   .menu-icon {
-    display: block; /* affiche le bouton menu */
-    position: absolute;
-    right: 20px; /* place l'icône à droite */
-    top: 25px; /* ajuste verticalement */
+    display: block; /* affiche l’icône menu */
   }
 
-  nav {
-    position: relative;
+  nav ul {
+    /* ton menu normal */
+    display: none; /* cache le menu normal sur téléphone */
   }
+}
+
+/* Sidebar */
+
+.close-icon {
+  width: 25px;
+  margin: 10px 0 30px 20px;
+  cursor: pointer;
+}
+
+/* ✅ Visible uniquement sur téléphone */
+@media screen and (max-width: 600px) {
+  .menu-icon {
+    display: block; /* montre l’icône seulement sur téléphone */
+  }
+
+  nav ul {
+    display: none; /* cache le menu classique */
+  }
+}
+.menu-icon {
+  position: absolute; /* pour pouvoir la placer librement */
+  top: 15px; /* espace depuis le haut */
+  right: 5px; /* espace depuis le bord droit */
 }
